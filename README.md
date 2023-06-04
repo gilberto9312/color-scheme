@@ -7,7 +7,7 @@ This is a color scheme calculator project in PHP. Allows you to evaluate the com
 Before running the code, make sure you have PHP installed on your system. You can run the script as follows:
 
 ```shell
-php calculadora_colores.php <color1> <color2>
+php colors.php <color1> <color2>
 ```
 ## example
 ```
