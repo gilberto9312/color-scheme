@@ -11,11 +11,12 @@ php colors.php <color1> <color2>
 ```
 ## example
 ```
-php colors.php #4CA1AF #C4E0E5
+php colors.php #114357 #F29492
 ```
 ## output
 ```
-Los colores combinan entre sí.
-Calidad de la combinación: 83.529411764706%
-Mejor color para combinar: #C4E0E5
+calidad de la combinacion entre #114357 y #F29492 es de: 52.287581699346.
+Los colores no combinan entre sí.
+posible combinacion #0d6b6d.
+mejor color para combinar #114357.
 ```
