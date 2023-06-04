@@ -65,6 +65,25 @@ function calculateIntensity($R, $G, $B)
     return ($R + $G + $B) / 3;
 }
 
+function findComplementaryColor($color)
+{
+    // Get the RGB values of the color
+    $R = $color['R'];
+    $G = $color['G'];
+    $B = $color['B'];
+
+    // Calculate the complementary components of RGB
+    $complementR = 255 - $R;
+    $complementG = 255 - $G;
+    $complementB = 255 - $B;
+
+    // Create the complementary color in hexadecimal format
+    $complementaryColor = rgbToHex($complementR, $complementG, $complementB);
+
+    return $complementaryColor;
+}
+
+
 function findBetterCombination($color1, $color2)
 {
     // Get the RGB values of the colors
@@ -123,12 +142,15 @@ $color2 = hexadecimalToRGB($param2);
 
 list($combinacion, $calidad) = evaluateCombination($color1, $color2);
 // Check the color scheme
+echo "calidad de la combinacion entre $param1 y $param2 es de: $calidad.\n";
+
 if ($combinacion) {
     echo "Los colores combinan entre sí.\n";
 } else {
     echo "Los colores no combinan entre sí.\n";
+    $posibleCombinacion =  findComplementaryColor($color2);
+    echo "posible combinacion $posibleCombinacion.\n ";
 }
-echo "calidad de la combinacion $calidad.\n";
 // Find the best combination
 $mejorCombinacion = findBetterCombination($color1, $color2);
 
