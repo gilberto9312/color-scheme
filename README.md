@@ -11,7 +11,7 @@ php calculadora_colores.php <color1> <color2>
 ```
 ## example
 ```
-php calculadora_colores.php #4CA1AF #C4E0E5
+php colors.php #4CA1AF #C4E0E5
 ```
 ## output
 ```
